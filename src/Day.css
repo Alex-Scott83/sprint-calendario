@@ -1,23 +1,26 @@
-/* Day.css */
 .day-container {
-    /*width: calc(14.28% - 20px); */ /* Divide el espacio en 7 columnas */
+  display: flex;
+  width: calc(100% / 7); /* Divide el ancho igualmente entre las 7 columnas */
+  background-color: lightslategray;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+}
 
-    display: flex;
-   flex-direction:column; 
-    background-color: lightslategray;
-    border: 2px solid white; /* Borde blanco */
-  margin-right: 20px; /* Margen entre las columnas de día */
-  padding: 10px; /* Espacio interior para el contenido */
-  height: 300px; /* Establece la altura en 300px */
-  }
+.day-column {
+  flex: 1;
+  text-align: center;
+  width: calc(100% / 7); /* Divide el ancho igualmente entre las 7 columnas */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+  /*border-right: 1px solid white; */ /* Borde blanco a la derecha de cada columna */
+  padding: 0 10px; /* Añade un espaciado alrededor del contenido de la columna */
+}
 
-  .day-container h3{
-    margin: 0;
-  
-    color: orange; /* Color de texto naranja */
-    text-align: center; /* Centrar el texto horizontalmente */
-  }
+.day-container h3 {
+  margin: 0;
+}
 
-  .day-container h3{
-font-size: 18px;
-  }
+.day-container p {
+  margin: 10px 0;
+}

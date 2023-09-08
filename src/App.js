@@ -6,7 +6,7 @@ import Fechas from './Fechas'; // Importa el componente Fechas
 
 function App() {
   // Debes conocer el número total de semanas desde Day.js
-  const totalWeeks = 5; // Cambia esto al valor correcto
+  const totalWeeks = 21; // Cambia esto al valor correcto
 
   // Estado para controlar la semana actual
   const [currentWeek, setCurrentWeek] = useState(1);
@@ -44,17 +44,20 @@ function App() {
 let NumSprint;
 
 switch (true) {
-  case currentWeek >= 1 && currentWeek <= 4:
+  case currentWeek >= 1 && currentWeek <= 2:
     NumSprint = 1;
     break;
-  case currentWeek >= 5 && currentWeek <= 8:
+  case currentWeek >= 3 && currentWeek <= 7:
     NumSprint = 2;
     break;
-  case currentWeek >= 9 && currentWeek <= 12:
+  case currentWeek >= 8 && currentWeek <= 11:
     NumSprint = 3;
     break;
-  case currentWeek >= 13 && currentWeek <= 16:
+  case currentWeek >= 12 && currentWeek <= 16:
     NumSprint = 4;
+    break;
+  case currentWeek >= 17 && currentWeek <= 21:
+    NumSprint = 5;
     break;
   default:
     NumSprint = 0; // Valor por defecto si no cumple ninguna condición
